@@ -40,6 +40,7 @@ export default function InventionGallery(){
                         key={invention.id} 
                         name={invention.name} 
                         type={invention.type} 
+                        slug={invention.slug}
                         signature={invention.signature} 
                         image={invention.image} 
                         imageSize={invention.imageSize}
