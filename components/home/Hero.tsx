@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 
 export default function HomeHero() {
     return (
-        <section className="flex flex-col items-center justify-center pt-11">
+        <section className="flex flex-col items-center justify-center min-h-[calc(100vh-52px)]">
             <div className="flex flex-col items-center gap-3">
                 <motion.h1 
                     initial={{ opacity: 0, y: 10 }}
@@ -15,7 +15,7 @@ export default function HomeHero() {
                     }}
                     className="text-7xl font-heading font-semibold tracking-wider leading-tight"
                 >
-                        Arcane Workshop
+                    Arcane Workshop
                 </motion.h1>
                 <motion.p 
                     initial={{ opacity: 0, y: 10 }}
@@ -27,7 +27,7 @@ export default function HomeHero() {
                     }}
                     className="text-md text-muted"
                 >
-                        Handcrafted D&D 5e Inventions
+                    Handcrafted D&D 5e Inventions
                 </motion.p>
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
