@@ -3,6 +3,17 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
 export default function HomeHero() {
+
+    const handleScroll = () => {
+        const invention = document.getElementById("catalogue")
+        if (invention) {
+            invention.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }
+
     return (
         <section className="flex flex-col items-center justify-center min-h-[calc(100vh-52px)]">
             <div className="flex flex-col items-center gap-3">
@@ -30,25 +41,21 @@ export default function HomeHero() {
                     Handcrafted D&D 5e Inventions
                 </motion.p>
                 <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{
-                        opacity: 1,
-                        y: [0, -4, 0],
-                    }}
-                    transition={{
-                        delay: 0.5,
-                        opacity: {
-                            duration: 0.5
-                        },
-                        y: {
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={handleScroll}
+                    className="cursor-pointer"
+                >
+                    <motion.div
+                        animate={{ y: [0, -4, 0] }}
+                        transition={{
                             duration: 2,
                             repeat: Infinity,
                             ease: "easeInOut",
-                        }
-                    }}
-                    className="hover:text-accent"
-                >
-                    <ArrowDown className="size-5" />
+                        }}
+                    >
+                        <ArrowDown className="size-6" />
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

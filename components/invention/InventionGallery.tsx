@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 export default function InventionGallery(){
     return (
-        <section className="flex flex-col items-center justify-center">
+        <section id="catalogue" className="flex flex-col items-center justify-center">
+
+            <hr className="my-6 border-t border-gray-300" />
+
             <div className="flex flex-col items-center gap-3">
                 <motion.h1 
                     initial={{ opacity: 0, y: 10 }}
