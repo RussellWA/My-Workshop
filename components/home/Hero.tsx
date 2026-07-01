@@ -41,20 +41,38 @@ export default function HomeHero() {
                     Handcrafted D&D 5e Inventions
                 </motion.p>
                 <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+                    initial="rest"
+                    animate="floating"
+                    whileHover="hover"
+                    whileTap="tap"
                     onClick={handleScroll}
-                    className="cursor-pointer"
+                    className="cursor-pointer p-2"
+                    variants={{
+                        rest: { scale: 1 },
+                        floating: { scale: 1 },
+                        hover: { scale: 1.1 },
+                        tap: { scale: 0.9 }
+                    }}
                 >
                     <motion.div
-                        animate={{ y: [0, -4, 0] }}
-                        transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: "easeInOut",
+                        variants={{
+                            rest: { y: 0 },
+                            floating: {
+                                y: [0, -4, 0],
+                                transition: {
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                }
+                            },
+                            hover: {
+                                y: 0,
+                                transition: { duration: 0.2, ease: "easeOut" }
+                            },
+                            tap: { y: 2 }
                         }}
                     >
-                        <ArrowDown className="size-6" />
+                        <ArrowDown className="size-6 text-zinc-400" />
                     </motion.div>
                 </motion.div>
             </div>
