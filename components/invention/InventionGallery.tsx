@@ -9,7 +9,7 @@ export default function InventionGallery(){
         <section id="catalogue" className="flex flex-col items-center justify-center py-24">
             <div className="w-32 h-px bg-zinc-700 mb-8" />
 
-            <div className="flex flex-col items-center gap-3 mb-20">
+            <div className="flex flex-col items-center gap-3 mb-25">
                 <motion.h1 
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}

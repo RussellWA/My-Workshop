@@ -23,7 +23,8 @@ export default function InventionCard({name, type, slug, signature, image, image
                     alt={name} 
                     width={imageSize} 
                     height={imageSize} 
-                    className="relative z-30"
+                    priority
+                    className="relative z-30 h-auto"
                 />
             </ArtifactDisplay>
         </Link>

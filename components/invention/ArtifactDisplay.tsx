@@ -23,7 +23,7 @@ export default function ArtifactDisplay({name, type, signature, children}: Artif
         >
             <div className="relative flex flex-col items-center">
                 <motion.div 
-                    className="relative z-20 mb-2"
+                    className="relative z-20 mb-5"
                     variants={{
                         rest: {
                             y: 0,

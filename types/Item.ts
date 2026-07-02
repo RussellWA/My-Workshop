@@ -3,7 +3,8 @@ export type ArcaneSignature =
     | "fire"
     | "holy"
     | "frost"
-    | "poison";
+    | "poison"
+    | "necrotic";
 
 export const SIGNATURES = {
     arcane: {
@@ -35,4 +36,37 @@ export const SIGNATURES = {
         glow: "bg-green-400",
         core: "bg-green-500/40",
     },
+
+    necrotic: {
+        text: "text-violet-200",
+        core: "bg-violet-600/40",
+        glow: "bg-violet-500",
+    },
 } as const;
+
+export interface Invention {
+    id: string;
+    slug: string;
+
+    name: string;
+    image: string;
+
+    type: string;
+
+    attunement: boolean;
+
+    quote: string;
+
+    description: string;
+
+    lore: string;
+
+    dmNotes: string;
+
+    mechanics: Mechanic[];
+}
+
+interface Mechanic {
+    title: string;
+    body: string;
+}
