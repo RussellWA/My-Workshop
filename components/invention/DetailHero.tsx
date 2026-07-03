@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
 import { ArcaneSignature, SIGNATURES } from "@/types/Item";
-import { INVENTIONS } from "@/data/inventions";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface DetailHeroProps {
     name: string;
@@ -67,7 +66,7 @@ export default function DetailHero({name, type, attunement, quote, image, imageS
                 {/* The Divider */}
                 <div className="relative w-full max-w-2xl flex items-center justify-center">
                     <div className="w-full h-px bg-linear-to-r from-transparent via-zinc-500 to-transparent"></div>
-                    <div className="absolute w-2 h-2 rotate-45 bg-cyan-500 shadow-[0_0_10px_#06b6d4]"></div>
+                    <div className={`absolute w-2 h-2 rotate-45 shadow-[0_0_10px_#06b6d4] ${sig.glow}`}></div>
                 </div>
             </div>
         </section>

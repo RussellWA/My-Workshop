@@ -52,21 +52,22 @@ export interface Invention {
     image: string;
 
     type: string;
+    signature: ArcaneSignature;
+    imageSize: number;
 
     attunement: boolean;
 
     quote: string;
 
-    description: string;
-
-    lore: string;
-
-    dmNotes: string;
-
+    description: string[];
+    
     mechanics: Mechanic[];
+    dmNotes: string[];
+    workshopNotes: string[];
 }
 
-interface Mechanic {
+export interface Mechanic {
     title: string;
-    body: string;
+    summary: string;
+    tags: string[];
 }
