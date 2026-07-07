@@ -1,21 +1,25 @@
-import { Mechanic } from "@/types/Item";
-import SectionHeading from "./SectionHeading";
+import { ArcaneSignature, Mechanic, SIGNATURE_THEME } from "@/types/Item";
+import DetailDivider from "./DetailDivider";
 import MechanicEntry from "./MechanicEntry";
+import SectionHeading from "./SectionHeading";
 
 interface DetailInfoProps {
     description: string[];
     mechanics: Mechanic[];
     workshopNotes: string[];
-    dmNotes: string[];
+    designNotes: string[];
+    signature: ArcaneSignature;
 }
 
-export default function DetailInfo({description, mechanics, workshopNotes, dmNotes}: DetailInfoProps) {
+export default function DetailInfo({description, mechanics, workshopNotes, designNotes, signature}: DetailInfoProps) {
+    const theme = SIGNATURE_THEME[signature]
+    
     return (
         <section className="space-y-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 justify-items-center">
                 <div className="flex flex-col gap-10">
                     <div>
-                        <SectionHeading>Description</SectionHeading>
+                        <SectionHeading divider={theme.divider}>Description</SectionHeading>
                         <div className="space-y-6 leading-relaxed">
                             {description.map((paragraph) => (
                                 <p key={paragraph} className="text-justify">{paragraph}</p>
@@ -23,13 +27,10 @@ export default function DetailInfo({description, mechanics, workshopNotes, dmNot
                         </div>
                     </div>
 
-                    <div className="relative flex items-center justify-center">
-                        <div className="w-full h-px bg-linear-to-r from-transparent via-zinc-600 to-transparent" />
-                        <div className="absolute w-2 h-2 rotate-45 bg-cyan-500 shadow-[0_0_10px_#06b6d4]" />
-                    </div>
+                    <DetailDivider color={theme.divider} />
 
                     <div>
-                        <SectionHeading>Workshop Notes</SectionHeading>
+                        <SectionHeading divider={theme.divider}>Workshop Notes</SectionHeading>
                         <div className="space-y-6 leading-relaxed">
                             {workshopNotes.map((paragraph) => (
                                 <p key={paragraph} className="text-justify">{paragraph}</p>
@@ -37,17 +38,14 @@ export default function DetailInfo({description, mechanics, workshopNotes, dmNot
                         </div>
                     </div>
 
-                    <div className="relative flex items-center justify-center">
-                        <div className="w-full h-px bg-linear-to-r from-transparent via-zinc-600 to-transparent" />
-                        <div className="absolute w-2 h-2 rotate-45 bg-cyan-500 shadow-[0_0_10px_#06b6d4]" />
-                    </div>
+                    <DetailDivider color={theme.divider} />
 
                     <div>
-                        <SectionHeading>Design Notes</SectionHeading>
+                        <SectionHeading divider={theme.divider}>Design Notes</SectionHeading>
                         <div className="space-y-3">
-                            {dmNotes.map((note) => (
+                            {designNotes.map((note) => (
                                 <div key={note} className="flex gap-3 items-start">
-                                    <div className="mt-2 h-1.5 w-1.5 rotate-45 bg-accent shrink-0" />
+                                    <div className={`mt-2 h-1.5 w-1.5 rotate-45 shrink-0 ${theme.divider}`} />
                                     <p>{note}</p>
                                 </div>
                             ))}
@@ -56,10 +54,18 @@ export default function DetailInfo({description, mechanics, workshopNotes, dmNot
                 </div>
 
                 <div>
-                    <SectionHeading>Mechanics</SectionHeading>
+                    <SectionHeading divider={theme.divider}>Mechanics</SectionHeading>
                     <div className="space-y-6">
                         {mechanics.map((mech) => ((
-                            <MechanicEntry key={mech.title} title={mech.title} tags={mech.tags} summary={mech.summary} />
+                            <MechanicEntry 
+                                key={mech.title} 
+                                title={mech.title} 
+                                tags={mech.tags} 
+                                summary={mech.summary} 
+                                border={theme.border}
+                                text={theme.text}
+                                pill={theme.pill}
+                            />
                         )))}
                     </div>
                 </div>

@@ -1,48 +1,75 @@
-export type ArcaneSignature =
-    | "arcane"
-    | "fire"
-    | "holy"
-    | "frost"
-    | "poison"
-    | "necrotic";
+export enum ArcaneSignature {
+    Arcane = "Arcane",
+    Fire = "Fire",
+    Holy = "Holy",
+    Necrotic = "Necrotic",
+}
 
-export const SIGNATURES = {
-    arcane: {
-        text: "text-cyan-100",
-        glow: "bg-cyan-400",
-        core: "bg-cyan-500/40",
+export const SIGNATURE_THEME = {
+    [ArcaneSignature.Arcane]: {
+        text: "text-cyan-400",
+        textGlow: "drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]",
+
+        border: "border-cyan-500/40",
+        divider: "bg-cyan-400",
+        pill: "bg-cyan-500/10 text-cyan-300 border border-cyan-500/30",
+        button: "border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-zinc-950",
+
+        heroGlow: "bg-cyan-400/30",
+        imageGlow: "drop-shadow-[0_0_20px_rgba(34,211,238,0.45)]",
+
+        coreGlow: "shadow-[0_0_35px_rgba(34,211,238,0.9)]",
+        coreGlowBackground: "bg-cyan-300",
     },
 
-    fire: {
-        text: "text-orange-300",
-        glow: "bg-orange-400",
-        core: "bg-orange-500/40",
+    [ArcaneSignature.Fire]: {
+        text: "text-orange-400",
+        textGlow: "drop-shadow-[0_0_8px_rgba(251,146,60,0.8)]",
+
+        border: "border-orange-500/40",
+        divider: "bg-orange-400",
+        pill: "bg-orange-500/10 text-orange-300 border border-orange-500/30",
+        button: "border-orange-500 text-orange-300 hover:bg-orange-500 hover:text-zinc-950",
+
+        heroGlow: "bg-orange-400/30",
+        imageGlow: "drop-shadow-[0_0_20px_rgba(251,146,60,0.45)]",
+
+        coreGlow: "shadow-[0_0_35px_rgba(251,146,60,0.9)]",
+        coreGlowBackground: "bg-orange-300",
     },
 
-    holy: {
-        text: "text-yellow-200",
-        glow: "bg-yellow-300",
-        core: "bg-yellow-400/40",
+    [ArcaneSignature.Holy]: {
+        text: "text-amber-200",
+        textGlow: "drop-shadow-[0_0_8px_rgba(253,224,71,0.8)]",
+
+        border: "border-amber-300/40",
+        divider: "bg-amber-200",
+        pill: "bg-amber-100/10 text-amber-100 border border-amber-300/30",
+        button: "border-amber-300 text-amber-100 hover:bg-amber-200 hover:text-zinc-950",
+
+        heroGlow: "bg-amber-200/25",
+        imageGlow: "drop-shadow-[0_0_20px_rgba(253,224,71,0.45)]",
+
+        coreGlow: "shadow-[0_0_35px_rgba(253,224,71,0.9)]",
+        coreGlowBackground: "bg-amber-200",
     },
 
-    frost: {
-        text: "text-sky-200",
-        glow: "bg-sky-300",
-        core: "bg-sky-400/40",
-    },
+    [ArcaneSignature.Necrotic]: {
+        text: "text-violet-400",
+        textGlow: "drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]",
 
-    poison: {
-        text: "text-green-300",
-        glow: "bg-green-400",
-        core: "bg-green-500/40",
-    },
+        border: "border-violet-500/40",
+        divider: "bg-violet-400",
+        pill: "bg-violet-500/10 text-violet-300 border border-violet-500/30",
+        button: "border-violet-500 text-violet-300 hover:bg-violet-500 hover:text-zinc-950",
 
-    necrotic: {
-        text: "text-violet-200",
-        core: "bg-violet-600/40",
-        glow: "bg-violet-500",
+        heroGlow: "bg-violet-500/30",
+        imageGlow: "drop-shadow-[0_0_20px_rgba(168,85,247,0.45)]",
+
+        coreGlow: "shadow-[0_0_35px_rgba(168,85,247,0.9)]",
+        coreGlowBackground: "bg-violet-400",
     },
-} as const;
+};
 
 export interface Invention {
     id: string;
@@ -62,7 +89,7 @@ export interface Invention {
     description: string[];
     
     mechanics: Mechanic[];
-    dmNotes: string[];
+    designNotes: string[];
     workshopNotes: string[];
 }
 

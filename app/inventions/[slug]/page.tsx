@@ -1,3 +1,4 @@
+import DetailDocs from "@/components/invention/DetailDocs";
 import DetailHero from "@/components/invention/DetailHero";
 import DetailInfo from "@/components/invention/DetailInfo";
 import { INVENTIONS } from "@/data/inventions";
@@ -15,7 +16,7 @@ export default async function InventionPage({ params }: InventionPageProps) {
     return (
         <main>
             {item && (
-                <>
+                <div className="flex flex-col gap-20">
                     <DetailHero 
                         name={item.name} 
                         type={item.type} 
@@ -29,9 +30,11 @@ export default async function InventionPage({ params }: InventionPageProps) {
                         description={item.description} 
                         mechanics={item.mechanics} 
                         workshopNotes={item.workshopNotes} 
-                        dmNotes={item.dmNotes}                        
+                        designNotes={item.designNotes}      
+                        signature={item.signature}                  
                     />
-                </>
+                    {/* <DetailDocs /> */}
+                </div>
             )}
         </main>
     );

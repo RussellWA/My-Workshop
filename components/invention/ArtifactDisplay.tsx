@@ -1,6 +1,7 @@
 "use client";
 
-import { ArcaneSignature, SIGNATURES } from "@/types/Item";
+import { cn } from "@/lib/utils";
+import { ArcaneSignature, SIGNATURE_THEME } from "@/types/Item";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
@@ -12,7 +13,7 @@ interface ArtifactDisplayProps {
 }
 
 export default function ArtifactDisplay({name, type, signature, children}: ArtifactDisplayProps) {
-    const colors = SIGNATURES[signature]
+    const theme = SIGNATURE_THEME[signature]
 
     return (
         <motion.div
@@ -60,7 +61,7 @@ export default function ArtifactDisplay({name, type, signature, children}: Artif
 
                     {/* Aura Glow */}
                     <motion.div 
-                        className={`absolute -top-4 left-1/2 w-48 h-10 rounded-[100%] blur-xl z-20 pointer-events-none origin-center ${colors.glow}`}
+                        className={cn("absolute -top-4 left-1/2 w-48 h-10 rounded-[100%] blur-xl z-20 pointer-events-none origin-center", theme.coreGlowBackground)}
                         style={{ x: "-50%" }}
                         animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.05, 1] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -68,7 +69,7 @@ export default function ArtifactDisplay({name, type, signature, children}: Artif
                     
                     {/* Inner core */}
                     <motion.div 
-                        className={`absolute -top-1 left-1/2 w-24 h-3 rounded-[100%] blur-md z-20 pointer-events-none origin-center ${colors.core}`}
+                        className={cn("absolute -top-1 left-1/2 w-24 h-3 rounded-[100%] blur-md z-20 pointer-events-none origin-center", theme.coreGlow, theme.coreGlowBackground)}
                         style={{ x: "-50%" }}
                         animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.1, 1] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.1 }}
@@ -81,7 +82,7 @@ export default function ArtifactDisplay({name, type, signature, children}: Artif
                         <div className="absolute inset-0 shadow-[inset_0_4px_8px_rgba(0,0,0,0.5)] pointer-events-none"></div>
                         
                         <motion.h2 
-                            className={`text-sm font-bold tracking-[0.25em] uppercase drop-shadow-[0_0_8px_rgba(34,211,238,0.9)] ${colors.text}`}
+                            className={`text-sm font-bold tracking-[0.25em] uppercase ${theme.text} ${theme.textGlow}`}
                             animate={{ opacity: [0.7, 1, 0.7] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
                         >
