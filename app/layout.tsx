@@ -3,6 +3,7 @@ import { Cinzel, Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { ViewTransitions } from "next-view-transitions";
 
 const cinzel = Cinzel({
 	variable: "--font-cinzel",
@@ -33,7 +34,9 @@ export default function RootLayout({
                 <Navbar />
                 <main className="flex-1">
                     <div className="mx-auto max-w-6xl">
-                        {children}
+                        <ViewTransitions>
+                            {children}
+                        </ViewTransitions>
                     </div>
                 </main>
                 <Footer />

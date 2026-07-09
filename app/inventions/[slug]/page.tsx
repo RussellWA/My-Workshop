@@ -20,6 +20,7 @@ export default async function InventionPage({ params }: InventionPageProps) {
                     <DetailHero 
                         name={item.name} 
                         type={item.type} 
+                        slug={item.slug}
                         attunement={item.attunement} 
                         quote={item.quote} 
                         image={item.image} 

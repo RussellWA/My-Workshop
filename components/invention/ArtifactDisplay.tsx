@@ -8,11 +8,12 @@ import { ReactNode } from "react";
 interface ArtifactDisplayProps {
     name: string;
     type: string;
+    slug: string;
     signature: ArcaneSignature;
     children: ReactNode;
 }
 
-export default function ArtifactDisplay({name, type, signature, children}: ArtifactDisplayProps) {
+export default function ArtifactDisplay({name, type, slug, signature, children}: ArtifactDisplayProps) {
     const theme = SIGNATURE_THEME[signature]
 
     return (
@@ -62,7 +63,7 @@ export default function ArtifactDisplay({name, type, signature, children}: Artif
                     {/* Aura Glow */}
                     <motion.div 
                         className={cn("absolute -top-4 left-1/2 w-48 h-10 rounded-[100%] blur-xl z-20 pointer-events-none origin-center", theme.coreGlowBackground)}
-                        style={{ x: "-50%" }}
+                        style={{ x: "-50%", viewTransitionName: `glow-${slug}`, }}
                         animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.05, 1] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     />
@@ -85,6 +86,9 @@ export default function ArtifactDisplay({name, type, signature, children}: Artif
                             className={`text-sm font-bold tracking-[0.25em] uppercase ${theme.text} ${theme.textGlow}`}
                             animate={{ opacity: [0.7, 1, 0.7] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                            style={{
+                                viewTransitionName: `name-${slug}`,
+                            }}
                         >
                             {name}
                         </motion.h2>
@@ -97,7 +101,12 @@ export default function ArtifactDisplay({name, type, signature, children}: Artif
                         </div>
                         
                         <div className="w-32 py-1 bg-zinc-900 border border-zinc-800 rounded shadow-md flex items-center justify-center">
-                            <p className="text-[11px] text-zinc-400 italic">{type}</p>
+                            <p 
+                                className="text-[11px] text-zinc-400 italic"
+                                style={{
+                                    viewTransitionName: `type-${slug}`,
+                                }}
+                            >{type}</p>
                         </div>
                     </div>
 

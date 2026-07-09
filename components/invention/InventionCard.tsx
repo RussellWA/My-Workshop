@@ -2,8 +2,8 @@
 
 import { ArcaneSignature } from "@/types/Item";
 import Image from "next/image";
-import Link from "next/link";
 import ArtifactDisplay from "./ArtifactDisplay";
+import { Link } from "next-view-transitions";
 
 interface InventionCardProps {
     name: string;
@@ -17,7 +17,7 @@ interface InventionCardProps {
 export default function InventionCard({name, type, slug, signature, image, imageSize}: InventionCardProps) {
     return (
         <Link href={`/inventions/${slug}`}>
-            <ArtifactDisplay name={name} type={type} signature={signature}>
+            <ArtifactDisplay name={name} type={type} slug={slug} signature={signature}>
                 <Image 
                     src={image} 
                     alt={name} 
@@ -25,6 +25,9 @@ export default function InventionCard({name, type, slug, signature, image, image
                     height={imageSize} 
                     priority
                     className="relative z-30 h-auto"
+                    style={{
+                        viewTransitionName: `image-${slug}`,
+                    }}
                 />
             </ArtifactDisplay>
         </Link>
