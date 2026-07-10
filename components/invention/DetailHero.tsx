@@ -71,13 +71,15 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
                         duration: 0.35,
                         delay: 0.15,
                     }}
-                    className={`flex items-center gap-3 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 ${theme.text}`}
+                    className={`flex items-center gap-3 text-[12px] md:text-sm font-semibold tracking-widest uppercase mb-6 ${theme.text}`}
                 >
                     <span
                         style={{
                             viewTransitionName: `type-${slug}`,
                         }}
-                    >{type}</span>
+                    >
+                        {type}
+                    </span>
                     <span className="w-1 h-1 bg-zinc-100 rounded-full"></span>
                     <span className="text-zinc-200/80">{attunement ? "Require Attunement" : "No Attunement"}</span>
                 </motion.div>
