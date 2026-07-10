@@ -39,13 +39,13 @@ export default async function InventionPage({ params }: InventionPageProps) {
                             signature={item.signature}                  
                         />
                         {/* <DetailDocs /> */}
-                        <section className="mx-auto mt-12 md:mt-24 max-w-3xl border-t border-zinc-800/70 pt-8">
+                        <section className="mx-auto mt-12 md:mt-24 max-w-3xl border-t border-zinc-800/70 pt-8 px-10">
                             <div className="space-y-3 text-center">
                                 <h3 className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.35em] text-zinc-500">
                                     Illustration Notice
                                 </h3>
 
-                                <p className="text-xs md:text-sm leading-7 text-zinc-500">
+                                <p className="text-xs md:text-sm leading-3 md:leading-7 text-zinc-500">
                                     I'm not an illustrator, so the artwork throughout Arcane Workshop is AI generated to help visualize my original inventions.
                                 </p>
                             </div>
