@@ -205,7 +205,7 @@ export const INVENTIONS: Invention[] = [
         workshopNotes: [
             "[Day 20] My Warlock (Ponzi) requested a device. He wanted something that can enhance his Eldritch Blast.",
             "[Day 24] The Nihil Singularis, a device that uses Kinetic Accelerator. With this he should finally be a destructive force along with V.",
-            "I shall take back this device, for he has betrayed you and your party. I will avenge you my brother. - Mikhail",
+            "I shall take back this device, for he has betrayed you and your party. Alberon, my brother, I will avenge you. - Mikhail",
         ],
     },
 ]
