@@ -45,6 +45,7 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
                         alt={name} 
                         width={imageSize*2} 
                         height={imageSize*2} 
+                        sizes="(max-width: 768px) 128px, 256px"
                         className={cn("relative h-auto z-10", theme.imageGlow)}
                         style={{
                             viewTransitionName: `image-${slug}`,

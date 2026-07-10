@@ -18,6 +18,7 @@ export default function InventionGallery(){
                         ease: "easeOut"
                     }}
                     className="text-2xl md:text-4xl font-heading font-semibold tracking-wider leading-tight"
+                    viewport={{ once: true }}
                 >
                     Workshop Catalogue
                 </motion.h1>
@@ -30,6 +31,7 @@ export default function InventionGallery(){
                         delay: 0.15
                     }}
                     className="text-xs md:text-md text-muted-foreground"
+                    viewport={{ once: true }}
                 >
                     Browse a collection of handcrafted inventions, each designed to be adapted for your own table
                 </motion.p>
