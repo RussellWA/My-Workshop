@@ -76,7 +76,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                         <SectionHeading divider={theme.divider}>Description</SectionHeading>
                         <div className="space-y-6 leading-relaxed">
                             {description.map((paragraph) => (
-                                <p key={paragraph} className="text-justify">{paragraph}</p>
+                                <p key={paragraph} className="text-[8px] text-justify">{paragraph}</p>
                             ))}
                         </div>
                     </div>
