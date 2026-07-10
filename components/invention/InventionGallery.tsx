@@ -6,7 +6,7 @@ import InventionCard from "./InventionCard";
 
 export default function InventionGallery(){
     return (
-        <section id="catalogue" className="flex flex-col items-center justify-center py-24 px-20">
+        <section id="catalogue" className="flex flex-col items-center justify-center py-24 px-10">
             <div className="w-32 h-px bg-zinc-700 mb-8" />
 
             <div className="flex flex-col items-center gap-3 mb-25">
