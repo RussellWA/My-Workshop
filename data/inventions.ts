@@ -158,7 +158,7 @@ export const INVENTIONS: Invention[] = [
             },
         ],
         workshopNotes: [
-            "[Day 10] My Cleric (Euphilia) requested a device. She wanted to keep us alive without relying solely on conventional divine magic.",
+            "[Day 10] My Cleric (Euphylia) requested a device. She wanted to keep us alive without relying solely on conventional divine magic.",
             "[Day 14] Took me a while to understand Dweomer, but I finished it. A wearable reactor capable of storing and releasing restorative bio magical mist on demand. The Pneuma Sanctus.",
             "[Day 17] This device has negative affects towards vampires. While battling, I saw V's body having a negative reaction towards the mist. I have to confront her when she wakes up.",
             "[Day 20] Now that I think of it, I can apply the Closed Loop mechanic from this device to other inventions, making them self sufficient. I can't have them bothering me during my rest anyways."
@@ -201,11 +201,14 @@ export const INVENTIONS: Invention[] = [
                 summary: "During a Short Rest, expend one Hit Die to stabilize the device and replenish 2 Charges.",
             },
         ],
-        designNotes: [""],
         workshopNotes: [
             "[Day 20] My Warlock (Ponzi) requested a device. He wanted something that can enhance his Eldritch Blast.",
             "[Day 24] The Nihil Singularis, a device that uses Kinetic Accelerator. With this he should finally be a destructive force along with V.",
             "I shall take back this device, for he has betrayed you and your party. Alberon, my brother, I will avenge you. - Mikhail",
+        ],
+        designNotes: [
+            "Modify recharge resource, damage roll, and side effects depending on campaign difficulty",
+            "DO NOT MAKE IT REQUIRE CONCENTRATION, thank you :D",
         ],
     },
 ]
