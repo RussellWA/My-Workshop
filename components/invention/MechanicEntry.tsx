@@ -18,13 +18,13 @@ export default function MechanicEntry({ title, tags, summary, border, text, pill
 
             <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
-                    <span key={tag} className={`rounded px-2 py-1 text-[10px] md:text-xs uppercase tracking-wider ${text} ${pill}`}>
+                    <span key={tag} className={`rounded px-2 py-1 text-[8px] md:text-xs uppercase tracking-wider ${text} ${pill}`}>
                         {tag}
                     </span>
                 ))}
             </div>
 
-            <p className="text-[10px] md:text-base text-zinc-300 pb-4">{summary}</p>
+            <p className="text-[10px] md:text-base text-zinc-300 pb-2 md:pb-4">{summary}</p>
         </div>
     );
 }
