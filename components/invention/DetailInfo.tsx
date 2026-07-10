@@ -76,7 +76,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                         <SectionHeading divider={theme.divider}>Description</SectionHeading>
                         <div className="space-y-6 leading-relaxed">
                             {description.map((paragraph) => (
-                                <p key={paragraph} className="text-[8px] text-justify">{paragraph}</p>
+                                <p key={paragraph} className="text-[10px] text-justify">{paragraph}</p>
                             ))}
                         </div>
                     </div>
@@ -108,7 +108,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                             {designNotes.map((note) => (
                                 <div key={note} className="flex gap-3 items-start">
                                     <div className={`mt-2 h-1.5 w-1.5 rotate-45 shrink-0 ${theme.divider}`} />
-                                    <p>{note}</p>
+                                    <p className="text-[10px]">{note}</p>
                                 </div>
                             ))}
                         </div>
@@ -120,7 +120,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                         <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
                         <div className="space-y-6 leading-relaxed">
                             {workshopNotes.map((paragraph) => (
-                                <p key={paragraph} className="text-justify">{paragraph}</p>
+                                <p key={paragraph} className="text-[10px] text-justify">{paragraph}</p>
                             ))}
                         </div>
                     </div>
