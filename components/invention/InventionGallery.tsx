@@ -6,7 +6,7 @@ import InventionCard from "./InventionCard";
 
 export default function InventionGallery(){
     return (
-        <section id="catalogue" className="flex flex-col items-center justify-center py-24">
+        <section id="catalogue" className="flex flex-col items-center justify-center py-24 px-20">
             <div className="w-32 h-px bg-zinc-700 mb-8" />
 
             <div className="flex flex-col items-center gap-3 mb-25">
@@ -17,7 +17,7 @@ export default function InventionGallery(){
                         duration: 0.5,
                         ease: "easeOut"
                     }}
-                    className="text-4xl font-heading font-semibold tracking-wider leading-tight"
+                    className="text-2xl md:text-4xl font-heading font-semibold tracking-wider leading-tight"
                 >
                     Workshop Catalogue
                 </motion.h1>
@@ -29,7 +29,7 @@ export default function InventionGallery(){
                         ease: "easeOut",
                         delay: 0.15
                     }}
-                    className="text-md text-muted-foreground"
+                    className="text-xs md:text-md text-muted-foreground"
                 >
                     Browse a collection of handcrafted inventions, each designed to be adapted for your own table
                 </motion.p>

@@ -14,7 +14,7 @@ export default function Navbar() {
                         Arcane Workshop
                     </span>
 
-                    <span className="mt-1 text-[5px] md:text-[10px] uppercase tracking-[0.45em] text-zinc-500">
+                    <span className="mt-1 text-[7px] md:text-[10px] uppercase tracking-[0.45em] text-zinc-500">
                         Engineering Archive
                     </span>
                 </Link>
