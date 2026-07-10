@@ -87,7 +87,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
 
                     <div>
                         <SectionHeading divider={theme.divider}>Mechanics</SectionHeading>
-                        <div className="space-y-2">
+                        <div className="space-y-3">
                             {mechanics.map((mech) => ((
                                 <MechanicEntry 
                                     key={mech.title} 

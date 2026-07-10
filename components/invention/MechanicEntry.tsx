@@ -11,7 +11,7 @@ interface MechanicEntryProps {
 
 export default function MechanicEntry({ title, tags, summary, border, text, pill }: MechanicEntryProps) {
     return (
-        <div className={cn("space-y-3 pb-6 border-b last:border-none max-w-xl", border)}>
+        <div className={cn("space-y-3 pb-3 border-b last:border-none max-w-xl", border)}>
             <h3 className="text-xs md:text-base font-semibold uppercase tracking-widest">
                 {title}
             </h3>
