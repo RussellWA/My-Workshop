@@ -15,7 +15,7 @@ export default function HomeHero() {
     }
 
     return (
-        <section className="flex flex-col items-center justify-center min-h-[calc(100vh-52px)]">
+        <section className="flex flex-col items-center justify-center min-h-[calc(100vh-52px)] px-20">
             <div className="flex flex-col items-center gap-3">
                 <motion.h1 
                     initial={{ opacity: 0, y: 10 }}
@@ -24,7 +24,7 @@ export default function HomeHero() {
                         duration: 0.5,
                         ease: "easeOut"
                     }}
-                    className="text-2xl md:text-7xl font-heading font-semibold tracking-wider leading-tight"
+                    className="text-4xl md:text-7xl font-heading font-semibold tracking-wider leading-tight"
                 >
                     Arcane Workshop
                 </motion.h1>
@@ -36,7 +36,7 @@ export default function HomeHero() {
                         ease: "easeOut",
                         delay: 0.15
                     }}
-                    className="text-md text-muted"
+                    className="text-xs md:text-md text-muted"
                 >
                     Handcrafted D&D 5e Inventions
                 </motion.p>
