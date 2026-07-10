@@ -21,7 +21,7 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
 
     return (
         <section className="relative flex flex-col items-center justify-center min-h-[85vh] w-full pt-16 px-10">
-            <div className="relative mb-16 flex flex-col items-center justify-center">
+            <div className="relative mb-8 md:mb-16 flex flex-col items-center justify-center">
                 <motion.div 
                     className={`absolute top-1/2 left-1/2 w-48 h-48 rounded-full blur-3xl -z-10 origin-center pointer-events-none ${theme.heroGlow}`}
                     style={{ x: "-50%", y: "-50%", viewTransitionName: `glow-${slug}`, }}
