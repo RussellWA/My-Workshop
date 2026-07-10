@@ -70,8 +70,10 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                     </div>
                 </div>
             </div>
+
+            {/* Mobile */}
             <div className="flex flex-col gap-20 justify-items-center md:hidden">
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-5">
                     <div>
                         <SectionHeading divider={theme.divider}>Description</SectionHeading>
                         <div className="space-y-6 leading-relaxed">
@@ -85,7 +87,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
 
                     <div>
                         <SectionHeading divider={theme.divider}>Mechanics</SectionHeading>
-                        <div className="space-y-6">
+                        <div className="space-y-2">
                             {mechanics.map((mech) => ((
                                 <MechanicEntry 
                                     key={mech.title} 
@@ -118,7 +120,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
 
                     <div>
                         <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
-                        <div className="space-y-6 leading-relaxed">
+                        <div className="space-y-3 leading-relaxed">
                             {workshopNotes.map((paragraph) => (
                                 <p key={paragraph} className="text-[10px] text-justify">{paragraph}</p>
                             ))}
