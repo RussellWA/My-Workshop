@@ -13,24 +13,7 @@ export default function DetailDocs() {
                     documentation for Dungeon Masters.
                 </p>
 
-                <div className="grid gap-10 lg:grid-cols-2 mt-10">
-                    <div className="mt-6 grid grid-cols-2 gap-4">
-                        {/* <Image
-                            src={}
-                            alt=""
-                            width={}
-                            height={}
-                            className="
-                                rounded-lg
-                                border border-zinc-700
-                                transition
-                                duration-300
-                                hover:scale-[1.02]
-                                hover:border-accent
-                            "
-                        /> */}
-                        Image
-                    </div>
+                <div className="mt-10">
                     <div className="rounded-xl border border-zinc-800 p-6 flex flex-col">
                         <h3 className="font-heading text-xl">
                             Need to convince your Dungeon Master?

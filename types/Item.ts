@@ -20,6 +20,7 @@ export const SIGNATURE_THEME = {
 
         coreGlow: "shadow-[0_0_35px_rgba(34,211,238,0.9)]",
         coreGlowBackground: "bg-cyan-300",
+        ambientGlow: "bg-[radial-gradient(circle_at_50%_20%,rgba(34,211,238,0.08),rgba(34,211,238,0.04),transparent_70%)]"
     },
 
     [ArcaneSignature.Fire]: {
@@ -36,6 +37,7 @@ export const SIGNATURE_THEME = {
 
         coreGlow: "shadow-[0_0_35px_rgba(251,146,60,0.9)]",
         coreGlowBackground: "bg-orange-300",
+        ambientGlow: "bg-[radial-gradient(circle_at_50%_20%,rgba(251,146,60,0.08),rgba(251,146,60,0.04),transparent_70%)]"
     },
 
     [ArcaneSignature.Holy]: {
@@ -52,6 +54,7 @@ export const SIGNATURE_THEME = {
 
         coreGlow: "shadow-[0_0_35px_rgba(253,224,71,0.9)]",
         coreGlowBackground: "bg-amber-200",
+        ambientGlow: "bg-[radial-gradient(circle_at_50%_20%,rgba(250,245,200,0.08),rgba(255,255,255,0.04),transparent_70%)]"
     },
 
     [ArcaneSignature.Necrotic]: {
@@ -68,6 +71,7 @@ export const SIGNATURE_THEME = {
 
         coreGlow: "shadow-[0_0_35px_rgba(168,85,247,0.9)]",
         coreGlowBackground: "bg-violet-400",
+        ambientGlow: "bg-[radial-gradient(circle_at_50%_20%,rgba(168,85,247,0.09),rgba(139,92,246,0.04),transparent_70%)]"
     },
 };
 
