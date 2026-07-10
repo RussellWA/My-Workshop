@@ -15,7 +15,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
     const theme = SIGNATURE_THEME[signature]
     
     return (
-        <section className="space-y-20">
+        <section className="space-y-20 px-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 justify-items-center">
                 <div className="flex flex-col gap-10">
                     <div>

@@ -20,7 +20,7 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
     const theme = SIGNATURE_THEME[signature]
 
     return (
-        <section className="relative flex flex-col items-center justify-center min-h-[85vh] w-full pt-16">
+        <section className="relative flex flex-col items-center justify-center min-h-[85vh] w-full pt-16 px-10">
             <div className="relative mb-16 flex flex-col items-center justify-center">
                 <motion.div 
                     className={`absolute top-1/2 left-1/2 w-48 h-48 rounded-full blur-3xl -z-10 origin-center pointer-events-none ${theme.heroGlow}`}
@@ -45,7 +45,6 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
                         alt={name} 
                         width={imageSize*2} 
                         height={imageSize*2} 
-                        sizes="(max-width: 768px) 128px, 256px"
                         className={cn("relative h-auto z-10", theme.imageGlow)}
                         style={{
                             viewTransitionName: `image-${slug}`,
@@ -56,7 +55,7 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
 
             <div className="flex flex-col items-center text-center z-20">
                 <h1 
-                    className="text-4xl md:text-5xl font-bold tracking-widest uppercase text-zinc-100 mb-3 drop-shadow-md"
+                    className="text-3xl md:text-5xl font-bold tracking-widest uppercase text-zinc-100 mb-3 drop-shadow-md"
                     style={{
                         viewTransitionName: `name-${slug}`,
                     }}
@@ -89,9 +88,9 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
                         duration: 0.45,
                         delay: 0.3,
                     }}
-                    className="text-lg md:text-xl italic text-zinc-400 font-serif max-w-lg mb-12"
+                    className="text-md md:text-xl italic text-zinc-400 font-serif max-w-lg mb-12"
                 >
-                    &quot;{quote}.&quot;
+                    &quot;{quote}&quot;
                 </motion.p>
 
                 {/* The Divider */}
