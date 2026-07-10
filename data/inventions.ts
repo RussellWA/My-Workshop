@@ -40,7 +40,7 @@ export const INVENTIONS: Invention[] = [
         ],
         workshopNotes: [
             "[Day 3] My Fighter (V) requested deceptively simple item. She wants more protection without turning herself into an immovable fortress. A body shield, Corpus Aegis.",
-            "[Day 5] I finished it. A compact converter, capable of storing and releasing defensive arcane energy on demand. With this device, she can keep the enemies away from me while i cast spells on a safe distance.",
+            "[Day 5] I finished it. A compact converter, capable of storing and releasing defensive arcane energy on demand. With this device, she can keep the enemies away from me while I cast spells on a safe distance.",
             "[Day 18] Turns out V hid the fact that she was a dhampir. After confronting, she revealed the truth without hesitation. I will still entrust this device to her, she is the party's power house after all",
             "[Day 23] I DID IT!! Just a few tweaks and combine with the Pneuma Sanctus' Closed Loop mechanic, I'm able to make the shield self sufficient and able to protect the whole village (Arvik Village). I shall call it the Arcane Dome.",
             "[Day 30] I'm able to make another Arcane Dome for the Martikov's Winery. Still needs improvements, but its good enough to protect the area. I hope I can make this for other villages while perfecting it."
@@ -153,7 +153,7 @@ export const INVENTIONS: Invention[] = [
             },
             {
                 title: "Lazarus Protocol",
-                tags: ["Attuned", "Passive"],
+                tags: ["Attuned", "Passive", "Consumes 1 Charge"],
                 summary: "While attuned, the device automatically expends a stored Charge when you would drop to 0 Hit Points, immediately restoring you to 1 Hit Point. This feature cannot activate if the reactor has no remaining Charges.",
             },
         ],
@@ -161,7 +161,7 @@ export const INVENTIONS: Invention[] = [
             "[Day 10] My Cleric (Euphilia) requested a device. She wanted to keep us alive without relying solely on conventional divine magic.",
             "[Day 14] Took me a while to understand Dweomer, but I finished it. A wearable reactor capable of storing and releasing restorative bio magical mist on demand. The Pneuma Sanctus.",
             "[Day 17] This device has negative affects towards vampires. While battling, I saw V's body having a negative reaction towards the mist. I have to confront her when she wakes up.",
-            "[Day 20] Now that I think of it, I can apply the Closed Loop mechanic from this device to other inventions, making them self sufficient. I can't have them bothering me on my rest anyways."
+            "[Day 20] Now that I think of it, I can apply the Closed Loop mechanic from this device to other inventions, making them self sufficient. I can't have them bothering me during my rest anyways."
         ],
         designNotes: [
             "Modify duration, maximum prime charges, and heal, also damage roll depending on campaign difficulty",
@@ -186,22 +186,26 @@ export const INVENTIONS: Invention[] = [
         ],
         mechanics: [
             {
-                title: "Priming",
-                tags: ["Long Rest", "1st Level Spell Slot", "2 Charges"],
-                summary: "At the end of a Long Rest, expend one 1st level spell slot to stabilize the Eldritch Crystal and replenish 2 Charges. Once Primed, the device remains operational until the next dawn.",
-            },
-            {
                 title: "Singularity Shot",
                 tags: ["Attuned", "Eldritch Blast", "Force Damage"],
                 summary: "Compress every beam of Eldritch Blast into a single unstable singularity. Make one Spell Attack Roll that deals the combined damage of all beams, plus an additional 1d10 Force damage for each beam combined.",
             },
             {
                 title: "Thermal Lockout",
-                tags: ["Passive", "Speed 0", "No Reactions"],
+                tags: ["Speed 0", "No Reactions"],
                 summary: "The immense recoil overloads the gyroscopic core after each Singularity Shot. Until the start of your next turn, your Speed becomes 0 and you cannot take Reactions.",
+            },
+            {
+                title: "Recharge",
+                tags: ["Short Rest", "1 Hit Die", "2 Charges"],
+                summary: "During a Short Rest, expend one Hit Die to stabilize the device and replenish 2 Charges.",
             },
         ],
         designNotes: [""],
-        workshopNotes: [],
+        workshopNotes: [
+            "[Day 20] My Warlock (Ponzi) requested a device. He wanted something that can enhance his Eldritch Blast.",
+            "[Day 24] The Nihil Singularis, a device that uses Kinetic Accelerator. With this he should finally be a destructive force along with V.",
+            "I shall take back this device, for he has betrayed you and your party. I will avenge you my brother. - Mikhail",
+        ],
     },
 ]
