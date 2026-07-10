@@ -39,6 +39,7 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
                 <motion.div 
                     animate={{ y: [0, -12, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="px-5 md:px-0"
                 >
                     <Image 
                         src={image} 
