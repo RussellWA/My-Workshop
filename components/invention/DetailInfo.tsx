@@ -18,7 +18,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
         <section className="space-y-20 px-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 justify-items-center">
                 <div className="flex flex-col gap-10">
-                    <div>
+                    <div className="order-1">
                         <SectionHeading divider={theme.divider}>Description</SectionHeading>
                         <div className="space-y-6 leading-relaxed">
                             {description.map((paragraph) => (
@@ -29,7 +29,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
 
                     <DetailDivider color={theme.divider} />
 
-                    <div>
+                    <div className="order-3">
                         <SectionHeading divider={theme.divider}>Design Notes</SectionHeading>
                         <div className="space-y-3">
                             {designNotes.map((note) => (
@@ -43,7 +43,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
 
                     <DetailDivider color={theme.divider} />
 
-                    <div>
+                    <div className="order-4">
                         <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
                         <div className="space-y-6 leading-relaxed">
                             {workshopNotes.map((paragraph) => (
@@ -53,7 +53,7 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                     </div>
                 </div>
 
-                <div>
+                <div className="order-2">
                     <SectionHeading divider={theme.divider}>Mechanics</SectionHeading>
                     <div className="space-y-6">
                         {mechanics.map((mech) => ((
