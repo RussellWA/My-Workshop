@@ -24,7 +24,7 @@ export default function HomeHero() {
                         duration: 0.5,
                         ease: "easeOut"
                     }}
-                    className="text-4xl md:text-7xl font-heading font-semibold tracking-wider leading-tight"
+                    className="text-5xl md:text-7xl font-heading font-semibold tracking-wider leading-tight text-center"
                 >
                     Arcane Workshop
                 </motion.h1>

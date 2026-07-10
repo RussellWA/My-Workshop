@@ -10,11 +10,11 @@ export default function Navbar() {
                     href="/"
                     className="group flex flex-col leading-none"
                 >
-                    <span className="text-lg font-bold tracking-[0.35em] uppercase text-zinc-100 transition-colors group-hover:text-white">
+                    <span className="text-md md:text-lg font-bold tracking-[0.35em] uppercase text-zinc-100 transition-colors group-hover:text-white">
                         Arcane Workshop
                     </span>
 
-                    <span className="mt-1 text-[10px] uppercase tracking-[0.45em] text-zinc-500">
+                    <span className="mt-1 text-[5px] md:text-[10px] uppercase tracking-[0.45em] text-zinc-500">
                         Engineering Archive
                     </span>
                 </Link>
@@ -23,7 +23,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-10">
                     <Link
                         href="/about"
-                        className="group relative text-sm uppercase tracking-[0.3em] text-zinc-400 transition-colors hover:text-zinc-100"
+                        className="group relative text-xs md:text-sm uppercase tracking-[0.3em] text-zinc-400 transition-colors hover:text-zinc-100"
                     >
                         About
 
