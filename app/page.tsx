@@ -4,10 +4,10 @@ import BaseAmbient from "@/components/layout/AmbientBackground/BaseAmbient";
 
 export default function Home() {
     return (
-        <>
+        <main className="relative overflow-x-hidden">
             <BaseAmbient />
             <HomeHero />
             <InventionGallery />
-        </>
+        </main>
     );
 }

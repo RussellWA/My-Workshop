@@ -16,7 +16,7 @@ export default async function InventionPage({ params }: InventionPageProps) {
     const item = INVENTIONS.find(i => i.slug == slug)
 
     return (
-        <main>
+        <main className="relative overflow-x-hidden">
             {item && (
                 <>
                     <SignatureAmbient signature={item.signature} />
@@ -39,6 +39,17 @@ export default async function InventionPage({ params }: InventionPageProps) {
                             signature={item.signature}                  
                         />
                         {/* <DetailDocs /> */}
+                        <section className="mx-auto mt-24 max-w-3xl border-t border-zinc-800/70 pt-8">
+                            <div className="space-y-3 text-center">
+                                <h3 className="text-xs font-semibold uppercase tracking-[0.35em] text-zinc-500">
+                                    Illustration Notice
+                                </h3>
+
+                                <p className="text-sm leading-7 text-zinc-500">
+                                    I'm not an illustrator, so the artwork throughout Arcane Workshop is AI generated to help visualize my original inventions.
+                                </p>
+                            </div>
+                        </section>
                     </div>
                 </>
             )}
