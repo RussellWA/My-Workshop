@@ -30,17 +30,6 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                     <DetailDivider color={theme.divider} />
 
                     <div>
-                        <SectionHeading divider={theme.divider}>Workshop Notes</SectionHeading>
-                        <div className="space-y-6 leading-relaxed">
-                            {workshopNotes.map((paragraph) => (
-                                <p key={paragraph} className="text-justify">{paragraph}</p>
-                            ))}
-                        </div>
-                    </div>
-
-                    <DetailDivider color={theme.divider} />
-
-                    <div>
                         <SectionHeading divider={theme.divider}>Design Notes</SectionHeading>
                         <div className="space-y-3">
                             {designNotes.map((note) => (
@@ -48,6 +37,17 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                                     <div className={`mt-2 h-1.5 w-1.5 rotate-45 shrink-0 ${theme.divider}`} />
                                     <p>{note}</p>
                                 </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <DetailDivider color={theme.divider} />
+
+                    <div>
+                        <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
+                        <div className="space-y-6 leading-relaxed">
+                            {workshopNotes.map((paragraph) => (
+                                <p key={paragraph} className="text-justify">{paragraph}</p>
                             ))}
                         </div>
                     </div>

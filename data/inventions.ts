@@ -31,7 +31,7 @@ export const INVENTIONS: Invention[] = [
                 title: "Arcane Barrier",
                 tags: ["2 Minutes", "+2 AC", "Physical Atk Resistance", "No Concentration"],
                 summary: "A protective force field surrounds the wearer for 2 minutes.",
-            },
+            }, 
             {
                 title: "Recharge",
                 tags: ["Short Rest", "1st Level Spell Slot"],
@@ -39,8 +39,11 @@ export const INVENTIONS: Invention[] = [
             },
         ],
         workshopNotes: [
-            "My Fighter requested deceptively simple item. She wants more protection without turning herself into an immovable fortress. Rather than forging another enchanted shield, I pursued a different approach.",
-            "The result is a compact converter, capable of storing and releasing defensive arcane energy on demand. It is called the Corpus Aegis.",
+            "[Day 3] My Fighter (V) requested deceptively simple item. She wants more protection without turning herself into an immovable fortress. A body shield, Corpus Aegis.",
+            "[Day 5] I finished it. A compact converter, capable of storing and releasing defensive arcane energy on demand. With this device, she can keep the enemies away from me while i cast spells on a safe distance.",
+            "[Day 18] Turns out V hid the fact that she was a dhampir. After confronting, she revealed the truth without hesitation. I will still entrust this device to her, she is the party's power house after all",
+            "[Day 23] I DID IT!! Just a few tweaks and combine with the Pneuma Sanctus' Closed Loop mechanic, I'm able to make the shield self sufficient and able to protect the whole village (Arvik Village). I shall call it the Arcane Dome.",
+            "[Day 30] I'm able to make another Arcane Dome for the Martikov's Winery. Still needs improvements, but its good enough to protect the area. I hope I can make this for other villages while perfecting it."
         ],
         designNotes: [
             "Modify the duration and AC bonus depending on campaign difficulty",
@@ -93,8 +96,10 @@ export const INVENTIONS: Invention[] = [
             },
         ],
         workshopNotes: [
-            "My Paladin requested a robust weapon. He wanted a blade capable of burning Barovia's undead to ash without relying on a permanent magical enchantment. Rather than forging an entirely new weapon, I chose to enhance his trusted silvered longsword with an Arcane Cell.",
-            "The result is a silvered weapon capable of storing and unleashing concentrated arcane fire on demand. Through further refinement, the design evolved to resonate with its wielder, rewarding those willing to sacrifice their own vitality in exchange for overwhelming offensive power. It is called the Animus Ardor.",
+            "[Day 6] My Paladin (Saltus) requested a robust weapon. He wanted a blade capable of burning Barovia's undead to ash without relying on a permanent magical enchantment. I probably should just use his longsword and attach an Arcane Cell.",
+            "[Day 10] I've finished the weapon, Animus Ardor. A silvered weapon that has a burst of fire. I hope he won't have to use the Animus Resonance too much, it hurts quite a bit.",
+            "[Day 18] THIS THING IS UNDERPOWERED. I have to give it more destructive power. I'll get to it after I finish Euphy's device.",
+            "[Day 31] I keep forgetting to upgrade the sword because of the chaos. I should be able to inspect the sword while Sal guards the camp."
         ],
         designNotes: [
             "Modify duration, maximum prime charges, and damage roll depending on campaign difficulty",
@@ -153,8 +158,10 @@ export const INVENTIONS: Invention[] = [
             },
         ],
         workshopNotes: [
-            "My Cleric requested a device. She wanted to keep her companions alive without relying solely on conventional divine magic. Rather than creating another enchanted relic, I pursued a different approach.",
-            "The result is a wearable reactor capable of storing and releasing restorative bio magical mist on demand. Through interchangeable operating modes, it can adapt to the changing needs of the battlefield. It is called the Pneuma Sanctus.",
+            "[Day 10] My Cleric (Euphilia) requested a device. She wanted to keep us alive without relying solely on conventional divine magic.",
+            "[Day 14] Took me a while to understand Dweomer, but I finished it. A wearable reactor capable of storing and releasing restorative bio magical mist on demand. The Pneuma Sanctus.",
+            "[Day 17] This device has negative affects towards vampires. While battling, I saw V's body having a negative reaction towards the mist. I have to confront her when she wakes up.",
+            "[Day 20] Now that I think of it, I can apply the Closed Loop mechanic from this device to other inventions, making them self sufficient. I can't have them bothering me on my rest anyways."
         ],
         designNotes: [
             "Modify duration, maximum prime charges, and heal, also damage roll depending on campaign difficulty",
