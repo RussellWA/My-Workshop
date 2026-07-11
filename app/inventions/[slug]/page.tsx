@@ -34,12 +34,12 @@ export default async function InventionPage({ params }: InventionPageProps) {
                         <DetailInfo 
                             description={item.description} 
                             mechanics={item.mechanics} 
-                            workshopNotes={item.workshopNotes} 
+                            creatorJournal={item.creatorJournal} 
                             designNotes={item.designNotes}      
                             signature={item.signature}                  
                         />
                         {/* <DetailDocs /> */}
-                        <section className="mx-auto mt-12 md:mt-24 max-w-3xl border-t border-zinc-800/70 pt-8 px-10">
+                        <section className="mx-auto mt-12 md:mt-24 max-w-3xl border-t border-zinc-800/70 py-8 px-10">
                             <div className="space-y-3 text-center">
                                 <h3 className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.35em] text-zinc-500">
                                     Illustration Notice

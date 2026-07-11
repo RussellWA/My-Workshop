@@ -94,7 +94,12 @@ export interface Invention {
     
     mechanics: Mechanic[];
     designNotes: string[];
-    workshopNotes: string[];
+    creatorJournal: CreatorJournal[];
+}
+
+export interface CreatorJournal { 
+    day: number;
+    entry: string 
 }
 
 export interface Mechanic {

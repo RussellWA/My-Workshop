@@ -1,4 +1,4 @@
-import { ArcaneSignature, Mechanic, SIGNATURE_THEME } from "@/types/Item";
+import { ArcaneSignature, CreatorJournal, Mechanic, SIGNATURE_THEME } from "@/types/Item";
 import DetailDivider from "./DetailDivider";
 import MechanicEntry from "./MechanicEntry";
 import SectionHeading from "./SectionHeading";
@@ -6,12 +6,12 @@ import SectionHeading from "./SectionHeading";
 interface DetailInfoProps {
     description: string[];
     mechanics: Mechanic[];
-    workshopNotes: string[];
+    creatorJournal: CreatorJournal[];
     designNotes: string[];
     signature: ArcaneSignature;
 }
 
-export default function DetailInfo({description, mechanics, workshopNotes, designNotes, signature}: DetailInfoProps) {
+export default function DetailInfo({description, mechanics, creatorJournal, designNotes, signature}: DetailInfoProps) {
     const theme = SIGNATURE_THEME[signature]
     
     return (
@@ -40,20 +40,9 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                             ))}
                         </div>
                     </div>
-
-                    <DetailDivider color={theme.divider} />
-
-                    <div>
-                        <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
-                        <div className="space-y-6 leading-relaxed">
-                            {workshopNotes.map((paragraph) => (
-                                <p key={paragraph} className="text-justify">{paragraph}</p>
-                            ))}
-                        </div>
-                    </div>
                 </div>
 
-                <div>
+                <div className="hidden md:block">
                     <SectionHeading divider={theme.divider}>Mechanics</SectionHeading>
                     <div className="space-y-6">
                         {mechanics.map((mech) => ((
@@ -67,6 +56,41 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                                 pill={theme.pill}
                             />
                         )))}
+                    </div>
+                </div>
+            </div>
+
+            <div className="hidden md:flex flex-col gap-10 justify-items-center">
+                <DetailDivider color={theme.divider} />
+                <div>
+                    <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
+                    <div className="space-y-6 leading-relaxed">
+                        {creatorJournal.map(({ day, entry }) => (
+                            <div
+                                key={day}
+                                className="border-l border-zinc-800 pl-5"
+                            >
+                                <div className="mb-2 flex items-center gap-3">
+                                    <span
+                                        className={`
+                                            text-xs
+                                            font-semibold
+                                            uppercase
+                                            tracking-[0.3em]
+                                            ${theme.text}
+                                        `}
+                                    >
+                                        Day {day}
+                                    </span>
+
+                                    <div className="h-px flex-1 bg-zinc-800" />
+                                </div>
+
+                                <p className="leading-8 text-zinc-300">
+                                    {entry}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -121,8 +145,31 @@ export default function DetailInfo({description, mechanics, workshopNotes, desig
                     <div>
                         <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
                         <div className="space-y-3 leading-relaxed">
-                            {workshopNotes.map((paragraph) => (
-                                <p key={paragraph} className="text-[10px] text-justify">{paragraph}</p>
+                            {creatorJournal.map(({ day, entry }) => (
+                                <div
+                                    key={day}
+                                    className="border-l border-zinc-800 pl-5"
+                                >
+                                    <div className="mb-2 flex items-center gap-3">
+                                        <span
+                                            className={`
+                                                text-xs
+                                                font-semibold
+                                                uppercase
+                                                tracking-[0.3em]
+                                                ${theme.text}
+                                            `}
+                                        >
+                                            Day {day}
+                                        </span>
+
+                                        <div className="h-px flex-1 bg-zinc-800" />
+                                    </div>
+
+                                    <p className="leading-8 text-zinc-300">
+                                        {entry}
+                                    </p>
+                                </div>
                             ))}
                         </div>
                     </div>
