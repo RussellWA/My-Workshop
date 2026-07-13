@@ -1,5 +1,6 @@
 import AboutHero from "@/components/about/AboutHero";
 import AboutInfo from "@/components/about/AboutInfo";
+import AboutPrinciples from "@/components/about/AboutPrinciples";
 import BaseAmbient from "@/components/layout/AmbientBackground/BaseAmbient";
 
 
@@ -9,6 +10,7 @@ export default function About() {
             <BaseAmbient />
             <AboutHero />
             <AboutInfo />
+            <AboutPrinciples />
         </main>
     )
 }
