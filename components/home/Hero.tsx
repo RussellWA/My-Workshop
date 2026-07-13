@@ -36,7 +36,7 @@ export default function HomeHero() {
                         ease: "easeOut",
                         delay: 0.15
                     }}
-                    className="text-xs md:text-md text-muted"
+                    className="text-sm md:text-lg text-muted"
                 >
                     Handcrafted D&D 5e Inventions
                 </motion.p>
