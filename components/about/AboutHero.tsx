@@ -26,7 +26,7 @@ export default function AboutHero() {
                         ease: "easeOut",
                         delay: 0.15
                     }}
-                    className="text-sm md:text-lg text-muted text-center"
+                    className="text-sm md:text-lg text-muted text-center mb-3"
                 >
                     Where Magic is Engineered, Not Merely Enchanted
                 </motion.p>
