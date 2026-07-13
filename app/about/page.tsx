@@ -1,3 +1,4 @@
+import AboutCreator from "@/components/about/AboutCreator";
 import AboutHero from "@/components/about/AboutHero";
 import AboutInfo from "@/components/about/AboutInfo";
 import AboutPrinciples from "@/components/about/AboutPrinciples";
@@ -13,6 +14,7 @@ export default function About() {
             <AboutInfo />
             <AboutPrinciples />
             <AboutProcess />
+            <AboutCreator />
         </main>
     )
 }
