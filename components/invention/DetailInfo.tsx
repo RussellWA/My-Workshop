@@ -166,7 +166,7 @@ export default function DetailInfo({description, mechanics, creatorJournal, desi
                                         <div className="h-px flex-1 bg-zinc-800" />
                                     </div>
 
-                                    <p className="leading-8 text-zinc-300">
+                                    <p className="text-[12px] leading-8 text-zinc-300">
                                         {entry}
                                     </p>
                                 </div>

@@ -24,7 +24,7 @@ export default function MechanicEntry({ title, tags, summary, border, text, pill
                 ))}
             </div>
 
-            <p className="text-[10px] md:text-base text-zinc-300 pb-2 md:pb-4">{summary}</p>
+            <p className="text-[12px] md:text-base text-zinc-300 pb-2 md:pb-4">{summary}</p>
         </div>
     );
 }
