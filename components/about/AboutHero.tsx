@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AboutHero() {
     return (
-        <section className="flex flex-col items-center justify-center px-20">
+        <section className="flex flex-col items-center justify-center px-20 pt-10">
             <div className="flex flex-col items-center gap-3">
                 <motion.h1 
                     initial={{ opacity: 0, y: 10 }}
@@ -17,6 +17,7 @@ export default function AboutHero() {
                 >
                     About
                 </motion.h1>
+                
                 <motion.p 
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -25,23 +26,21 @@ export default function AboutHero() {
                         ease: "easeOut",
                         delay: 0.15
                     }}
-                    className="text-lg md:text-xl text-muted"
-                >
-                    Arcane Workshop
-                </motion.p>
-                <motion.p 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        duration: 0.5,
-                        ease: "easeOut",
-                        delay: 0.3
-                    }}
-                    className="text-sm md:text-lg text-muted"
+                    className="text-sm md:text-lg text-muted text-center"
                 >
                     Where Magic is Engineered, Not Merely Enchanted
                 </motion.p>
+
+                <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.3,
+                    }}
+                    className="w-full h-px origin-center bg-linear-to-r from-transparent via-zinc-500 to-transparent"
+                />
             </div>
         </section>
-    )
+    );
 }
