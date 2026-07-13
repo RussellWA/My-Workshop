@@ -1,8 +1,6 @@
-import DetailDocs from "@/components/invention/DetailDocs";
 import DetailHero from "@/components/invention/DetailHero";
 import DetailInfo from "@/components/invention/DetailInfo";
 import SignatureAmbient from "@/components/layout/AmbientBackground/SignatureAmbient";
-import AmbientBackground from "@/components/layout/AmbientBackground/SignatureAmbient";
 import { INVENTIONS } from "@/data/inventions";
 
 interface InventionPageProps {

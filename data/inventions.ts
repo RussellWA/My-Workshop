@@ -181,7 +181,7 @@ export const INVENTIONS: Invention[] = [
                 entry: "The Nihil Singularis, a device that uses Kinetic Accelerator. With this he should finally be a destructive force along with V."
             },
             {
-                day: 25,
+                day: 32,
                 entry: "I shall take back this device, for he has betrayed you and your party. Alberon, my brother, I will avenge you. - Mikhail"
             }
         ],
