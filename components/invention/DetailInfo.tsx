@@ -134,7 +134,7 @@ export default function DetailInfo({description, mechanics, creatorJournal, desi
                             {designNotes.map((note) => (
                                 <div key={note} className="flex gap-3 items-start">
                                     <div className={`mt-2 h-1.5 w-1.5 rotate-45 shrink-0 ${theme.divider}`} />
-                                    <p className="text-[10px]">{note}</p>
+                                    <p className="text-[12px]">{note}</p>
                                 </div>
                             ))}
                         </div>
