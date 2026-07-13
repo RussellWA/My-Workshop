@@ -20,7 +20,7 @@ export default function DetailHero({name, type, slug, attunement, quote, image, 
     const theme = SIGNATURE_THEME[signature]
 
     return (
-        <section className="relative flex flex-col items-center justify-center w-full px-10">
+        <section className="relative flex flex-col items-center justify-center w-full px-10 pt-10">
             <div className="relative mb-8 md:mb-16 flex flex-col items-center justify-center">
                 <motion.div 
                     className={`absolute top-1/2 left-1/2 w-48 h-48 rounded-full blur-3xl -z-10 origin-center pointer-events-none ${theme.heroGlow}`}
