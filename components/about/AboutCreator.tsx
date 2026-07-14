@@ -20,7 +20,7 @@ export default function AboutCreator() {
                         Hi, I&apos;m Russell.
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        I am a software developer who approaches D&D mechanics the same way I approach application architecture—with a focus on logic, scalable systems, and clean design. 
+                        I am a software developer who approaches D&D mechanics the same way I approach application architecture with a focus on logic, scalable systems, and clean design. 
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
                         When I&apos;m not writing backend services or building web tools, I&apos;m usually designing custom game mechanics, tinkering with hardware, or drafting new schematics for the workshop.
