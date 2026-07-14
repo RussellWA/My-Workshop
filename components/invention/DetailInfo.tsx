@@ -2,6 +2,7 @@ import { ArcaneSignature, CreatorJournal, Mechanic, SIGNATURE_THEME } from "@/ty
 import DetailDivider from "./DetailDivider";
 import MechanicEntry from "./MechanicEntry";
 import SectionHeading from "./SectionHeading";
+import CharacterCard from "../character/CharacterCard";
 
 interface DetailInfoProps {
     description: string[];
@@ -62,35 +63,39 @@ export default function DetailInfo({description, mechanics, creatorJournal, desi
 
             <div className="hidden md:flex flex-col gap-10 justify-items-center">
                 <DetailDivider color={theme.divider} />
-                <div>
-                    <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
-                    <div className="space-y-6 leading-relaxed">
-                        {creatorJournal.map(({ day, entry }) => (
-                            <div
-                                key={day}
-                                className="border-l border-zinc-800 pl-5"
-                            >
-                                <div className="mb-2 flex items-center gap-3">
-                                    <span
-                                        className={`
-                                            text-xs
-                                            font-semibold
-                                            uppercase
-                                            tracking-[0.3em]
-                                            ${theme.text}
-                                        `}
-                                    >
-                                        Day {day}
-                                    </span>
 
-                                    <div className="h-px flex-1 bg-zinc-800" />
+                <div className="flex gap-12">
+                    <CharacterCard />
+                    <div>
+                        <SectionHeading divider={theme.divider}>Creator's Journal</SectionHeading>
+                        <div className="space-y-6 leading-relaxed">
+                            {creatorJournal.map(({ day, entry }) => (
+                                <div
+                                    key={day}
+                                    className="border-l border-zinc-800 pl-5"
+                                >
+                                    <div className="mb-2 flex items-center gap-3">
+                                        <span
+                                            className={`
+                                                text-xs
+                                                font-semibold
+                                                uppercase
+                                                tracking-[0.3em]
+                                                ${theme.text}
+                                            `}
+                                        >
+                                            Day {day}
+                                        </span>
+
+                                        <div className="h-px flex-1 bg-zinc-800" />
+                                    </div>
+
+                                    <p className="leading-8 text-zinc-300">
+                                        {entry}
+                                    </p>
                                 </div>
-
-                                <p className="leading-8 text-zinc-300">
-                                    {entry}
-                                </p>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,6 +144,10 @@ export default function DetailInfo({description, mechanics, creatorJournal, desi
                             ))}
                         </div>
                     </div>
+
+                    <DetailDivider color={theme.divider} />
+
+                    <CharacterCard />
 
                     <DetailDivider color={theme.divider} />
 
